@@ -1,12 +1,14 @@
-import { View } from 'react-native';
+import { FlatList } from 'react-native';
 
 import { CATEGORIES } from '../data/dummy-data';
 
+const renderCategoryItem = (item) => {
+  
+}
+
 const CategoriesScreen = () => {
   return (
-    <View>
-      <Text>CategoriesScreen</Text>
-    </View>
+    <FlatList data={CATEGORIES} keyExtractor={(item) => item.id} renderItem={renderCategoryItem} />
   );
 };
 
