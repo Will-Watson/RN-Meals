@@ -5,7 +5,7 @@ const CategoryGridTile = ({title, color}) => {
     <View>
       <Pressable>
         <View>
-          <Text>Category Title</Text>
+          <Text>{title}</Text>
         </View>
       </Pressable>
     </View>
