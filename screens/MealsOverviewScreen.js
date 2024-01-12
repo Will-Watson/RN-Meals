@@ -1,11 +1,15 @@
 import { View, Text, StyleSheet } from 'react-native';
+// import {useRoute} from '@react-navigation/native';
 
 import {MEALS} from '../data/dummy-data';
 
-const MealsOverviewScreen = () => {
+const MealsOverviewScreen = ({route}) => {
+  // const route = useRoute();
+  const catId = route.params.categoryId;
+
   return (
     <View style={styles.container}>
-      <Text>MealsOverviewScreen</Text>
+      <Text>MealsOverviewScreen - {catId}</Text>
     </View>
   );
 };
