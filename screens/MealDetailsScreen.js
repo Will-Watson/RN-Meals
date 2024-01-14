@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import {useLayoutEffect} from 'react';
+import { View, Text, StyleSheet, Image, ScrollView, Button } from 'react-native';
 
 import { MEALS } from '../data/dummy-data';
 import MealDetails from '../components/MealDetails';
@@ -8,6 +9,14 @@ import List from '../components/MealDetail/List';
 const MealDetailsScreen = ({ route, navigation }) => {
   const mealId = route.params.mealId;
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => {
+        return <Button title='Fav' onPress={() => {}} />
+      }
+    });
+  }, [navigation]);
   return (
     <ScrollView style={styles.rootContainer}>
       <Image style={styles.image} source={{ uri: selectedMeal.imageUrl }} />
