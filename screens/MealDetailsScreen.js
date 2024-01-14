@@ -1,5 +1,12 @@
-import {useLayoutEffect} from 'react';
-import { View, Text, StyleSheet, Image, ScrollView, Button } from 'react-native';
+import { useLayoutEffect } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  ScrollView,
+  Button,
+} from 'react-native';
 
 import { MEALS } from '../data/dummy-data';
 import MealDetails from '../components/MealDetails';
@@ -10,11 +17,15 @@ const MealDetailsScreen = ({ route, navigation }) => {
   const mealId = route.params.mealId;
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
+  const headerButtonPressHandler = () => {
+    console.log('Fav button pressed!');
+  };
+
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
-        return <Button title='Fav' onPress={() => {}} />
-      }
+        return <Button title='Fav' onPress={headerButtonPressHandler} />;
+      },
     });
   }, [navigation]);
   return (
