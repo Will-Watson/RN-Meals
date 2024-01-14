@@ -8,11 +8,25 @@ const MealDetailsScreen = ({ route, navigation }) => {
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
   return (
     <View>
-      <Image source={{uri: selectedMeal.imageUrl}}/>
+      <Image source={{ uri: selectedMeal.imageUrl }} />
       <Text>{selectedMeal.title}</Text>
-      <MealDetails duration={selectedMeal.duration} complexity={selectedMeal.complexity} affordability={selectedMeal.affordability}/>
-      <Text>{selectedMeal.ingredients}</Text>
-      <Text>{selectedMeal.steps}</Text>
+      <MealDetails
+        duration={selectedMeal.duration}
+        complexity={selectedMeal.complexity}
+        affordability={selectedMeal.affordability}
+      />
+      <Text>Ingredients</Text>
+      <Text>
+        {selectedMeal.ingredients.map((ingredient) => (
+          <Text>{ingredient}</Text>
+        ))}
+      </Text>
+      <Text>Steps</Text>
+      <Text>
+        {selectedMeal.steps.map((step) => (
+          <Text>{step}</Text>
+        ))}
+      </Text>
     </View>
   );
 };
