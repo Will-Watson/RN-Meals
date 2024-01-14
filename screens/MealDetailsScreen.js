@@ -8,8 +8,8 @@ const MealDetailsScreen = ({ route, navigation }) => {
   const selectedMeal = MEALS.find((meal) => meal.id === mealId);
   return (
     <View>
-      <Image source={{ uri: selectedMeal.imageUrl }} />
-      <Text>{selectedMeal.title}</Text>
+      <Image style={styles.image} source={{ uri: selectedMeal.imageUrl }} />
+      <Text style={styles.title}>{selectedMeal.title}</Text>
       <MealDetails
         duration={selectedMeal.duration}
         complexity={selectedMeal.complexity}
@@ -31,6 +31,18 @@ const MealDetailsScreen = ({ route, navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  image: {
+    width: '100%',
+    height: 350,
+  },
+  title: {
+    fortWeight: 'bold',
+    fontSize: 24,
+    margin: 8,
+    textAlign: 'center',
+    color: 'white',
+  }
+});
 
 export default MealDetailsScreen;
