@@ -1,12 +1,13 @@
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-const MealDetailsScreen = () => {
+const MealDetailsScreen = ({ route, navigation }) => {
+  const mealId = route.params.mealId;
   return (
     <View>
-      <Text>Meal Details Screen (MEAL ID)</Text>
+      <Text>Meal Details Screen {mealId}</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({});
 
