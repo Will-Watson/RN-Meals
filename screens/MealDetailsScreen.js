@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
 
 import { MEALS } from '../data/dummy-data';
+import MealDetails from '../components/MealDetails';
 
 const MealDetailsScreen = ({ route, navigation }) => {
   const mealId = route.params.mealId;
@@ -9,9 +10,9 @@ const MealDetailsScreen = ({ route, navigation }) => {
     <View>
       <Image source={{uri: selectedMeal.imageUrl}}/>
       <Text>{selectedMeal.title}</Text>
-      
-      <Text>Ingredients</Text>
-      <Text>Steps</Text>
+      <MealDetails duration={selectedMeal.duration} complexity={selectedMeal.complexity} affordability={selectedMeal.affordability}/>
+      <Text>{selectedMeal.ingredients}</Text>
+      <Text>{selectedMeal.steps}</Text>
     </View>
   );
 };
