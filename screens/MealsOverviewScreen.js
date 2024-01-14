@@ -20,7 +20,6 @@ const MealsOverviewScreen = ({ route, navigation }) => {
 
     navigation.setOptions({
       title: categoryTitle,
-      headerBackTitle: 'Back',
     });
   }, [catId, navigation]);
 
