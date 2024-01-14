@@ -18,13 +18,13 @@ const MealDetailsScreen = ({ route, navigation }) => {
       <Text>Ingredients</Text>
       <Text>
         {selectedMeal.ingredients.map((ingredient) => (
-          <Text>{ingredient}</Text>
+          <Text key={ingredient}>{ingredient}</Text>
         ))}
       </Text>
       <Text>Steps</Text>
       <Text>
         {selectedMeal.steps.map((step) => (
-          <Text>{step}</Text>
+          <Text key={step}>{step}</Text>
         ))}
       </Text>
     </View>
