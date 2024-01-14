@@ -12,6 +12,7 @@ import { MEALS } from '../data/dummy-data';
 import MealDetails from '../components/MealDetails';
 import SubTitle from '../components/MealDetail/SubTitle';
 import List from '../components/MealDetail/List';
+import IconButton from '../components/IconButton';
 
 const MealDetailsScreen = ({ route, navigation }) => {
   const mealId = route.params.mealId;
@@ -24,7 +25,7 @@ const MealDetailsScreen = ({ route, navigation }) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
-        return <Button title='Fav' onPress={headerButtonPressHandler} />;
+        return <IconButton title='Fav' onPress={headerButtonPressHandler} />;
       },
     });
   }, [navigation]);
