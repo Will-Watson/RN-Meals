@@ -20,8 +20,14 @@ const FavoritesContextProvider = ({children}) => {
     });
   };
 
+  const value = {
+    ids: favoriteMealIds,
+    addFavorite,
+    removeFavorite,
+  }
 
-  return <FavoritesContext.Provider value={{}}>{children}</FavoritesContext.Provider>;
+
+  return <FavoritesContext.Provider value={value}>{children}</FavoritesContext.Provider>;
 };
 
 export default FavoritesContextProvider;
