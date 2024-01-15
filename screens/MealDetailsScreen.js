@@ -5,7 +5,6 @@ import {
   StyleSheet,
   Image,
   ScrollView,
-  Button,
 } from 'react-native';
 
 import { MEALS } from '../data/dummy-data';
