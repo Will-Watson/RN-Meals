@@ -27,6 +27,7 @@ const MealDetailsScreen = ({ route, navigation }) => {
       headerRight: () => {
         return <IconButton icon='star' color='white' onPress={headerButtonPressHandler} />;
       },
+      title: null,
     });
   }, [navigation]);
   return (
