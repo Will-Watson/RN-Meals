@@ -28,7 +28,13 @@ const DrawerNavigator = () => {
         },
       }}
     >
-      <Drawer.Screen name='Categories' component={CategoriesScreen} />
+      <Drawer.Screen
+        name='Categories'
+        component={CategoriesScreen}
+        options={{
+          title: 'All Categories',
+        }}
+      />
       <Drawer.Screen name='Favorites' component={FavoritesScreen} />
     </Drawer.Navigator>
   );
