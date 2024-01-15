@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     height: 350,
   },
   title: {
-    fortWeight: 'bold',
+    fontWeight: 'bold',
     fontSize: 24,
     margin: 8,
     textAlign: 'center',
