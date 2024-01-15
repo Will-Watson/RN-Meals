@@ -45,6 +45,7 @@ const MealDetailsScreen = ({ route, navigation }) => {
       title: null,
     });
   }, [navigation, mealIsFavorite]);
+
   return (
     <ScrollView style={styles.rootContainer}>
       <Image style={styles.image} source={{ uri: selectedMeal.imageUrl }} />
