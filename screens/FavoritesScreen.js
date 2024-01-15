@@ -1,13 +1,16 @@
-import { View, Text, StyleSheet } from "react-native";
+import { useContext } from 'react';
+
+import { MEALS } from '../data/dummy-data';
+import { FavoritesContext } from '../store/context/favorites-context';
+import MealsList from '../components/MealsList/MealsList';
 
 const FavoritesScreen = () => {
-  return (
-    <View style={styles.screen}>
-      <Text>The Favorites Screen!</Text>
-    </View>
+  const favoriteMealsContext = useContext(FavoritesContext);
+
+  const favoriteMeals = MEALS.filter((meal) =>
+    favoriteMealsContext.ids.includes(meal.id)
   );
+  return <MealsList items={favoriteMeals} />;
 };
 
-const styles = StyleSheet.create({})
-;
 export default FavoritesScreen;
