@@ -63,7 +63,8 @@ export default function App() {
   return (
     <>
       <StatusBar style='light' />
-      <FavoritesContextProvider>
+      {/* <FavoritesContextProvider> */}
+      <Provider>
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={{
@@ -107,7 +108,8 @@ export default function App() {
             <Stack.Screen name='MealDetails' component={MealDetailsScreen} />
           </Stack.Navigator>
         </NavigationContainer>
-      </FavoritesContextProvider>
+      </Provider>
+      {/* </FavoritesContextProvider> */}
     </>
   );
 }
